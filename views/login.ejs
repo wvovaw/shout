@@ -1,0 +1,18 @@
+<%- include('head') %>
+<%- include('menu') -%>
+<div class="main-content">
+<h1><%= title %></h1>
+  <p>Fill in the form bellow to sign in!</p>
+  <%- include('messages') %>
+  <form action="/login" method="POST">
+    <p>
+      <input type="text" name="user[name]" placeholder="Username" />
+    </p>
+    <p>
+      <input type="password" name="user[pass]" placeholder="Password" />
+    </p>
+    <p>
+      <input type="submit" value="Login" />
+    </p>
+</div>
+<%- include('foot') %>

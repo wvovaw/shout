@@ -1,0 +1,15 @@
+<%- include('head') -%>
+<%- include('menu') -%>
+  <h1><%= title %></h1>
+  <p>Fill in the form bellow to add a new post.</p>
+<%- include('messages') %>
+  <form action='/post' method='post'>
+     <p>
+     <input type='text' name='entry[title]' placeholder='Title' />
+     </p>
+     <p>
+     <input type='submit' value='Post' />
+     </p>
+  </form>
+  <%- include('foot') -%>
+
