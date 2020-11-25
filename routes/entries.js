@@ -19,6 +19,8 @@ router.get('/', (req, res, next) => {
   });
 });
 
+router.post('')
+
 /* POST posts page. */
 // Submit form
 router.post('/post',
@@ -27,7 +29,7 @@ router.post('/post',
   (req, res, next) => {
     const data = req.body.entry;
     const user = res.locals.user;
-    const username = user ? user.name : null;
+    const username = user ? user.name : 'Anonimalus';
     const entry = new Entry({
       username: username,
       title: data.title,

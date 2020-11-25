@@ -2,10 +2,12 @@
 <%- include('menu') -%>
 <div class="main-container">
 <% entries.forEach((entry) => { %>
-  <div class='entry'>
-    <h3><%= entry.title %></h3>
-    <p><%= entry.body %></p>
-    <p>Posted by <%= entry.username %></p>
+  <div class='entry-container'>
+    <div class='entry'>
+      <h3 class='entry-title'><%= entry.title %></h3>
+      <p class='entry-body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facere perferendis modi veniam rerum illum consequuntur corporis adipisci, accusantium possimus itaque delectus molestiae dicta magni fugit debitis laborum aperiam dolorem?</p>
+      <p class='entry-author'>Posted by <%= entry.username %></p>
+    </div>
   </div>
 <% }) %>
 </div>

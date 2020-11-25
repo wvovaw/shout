@@ -1,16 +1,28 @@
 <%- include('head') %>
 <%- include('menu') -%>
-<h1><%= title %></h1>
-<p>Fill in the form bellow to sign up!</p>
-<%- include('messages') %>
-<form action="/register" method="POST">
-  <p>
-    <input type="text" name="user[name]" placeholder="Username" />
-  </p>
-  <p>
-    <input type="password" name="user[pass]" placeholder="Password" />
-  </p>
-  <p>
-    <input type="submit" value="Sign up" />
-  </p>
+
+<div class="main-content">
+  <div class="login-form">
+    <h1><%= title %></h1>
+    <hr>
+    <form action="/register" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label> <br>
+        <input type="text" name="user[name]"/>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password</label> <br>
+        <input type="password" name="user[pass]"/>
+      </div>
+      <input type="submit" value="Login" />
+      <hr>
+      <%- include('messages') -%>
+      <hr>
+      <!-- <button type="button" class="btn btn-link">Forgot Password</button> <br> -->
+      <label>Don't have an account?</label>
+      <button type="button" class="btn btn-link" href="/signup">Sign Up!</button>
+    </form>
+  </div>
+</div>
+
 <%- include('foot') %>

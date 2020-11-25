@@ -1,3 +1,41 @@
+body {
+  background-color: #EFF0F1;
+}
+
 .main-container {
   padding: 5px 10px 5px 10px;
+}
+
+.entry-container {
+    background-color: #fff;
+    margin: 50px 150px 0 150px;
+    border: 1px black solid;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.entry {
+    margin: 10px;
+}
+.entry-author {
+    float: right;
+    clear: none;
+    margin: 0px 0 5px 0px;
+    font-style: italic;
+    color: gray;
+}
+
+.login-form {
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    margin: 100px auto;
+    background-color: #fff;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 1em 2em;
+    display: table;
 }
