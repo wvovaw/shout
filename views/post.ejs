@@ -1,15 +1,21 @@
 <%- include('head') -%>
 <%- include('menu') -%>
+<div class="main-content">
+  <div class="post-form">
   <h1><%= title %></h1>
-  <p>Fill in the form bellow to add a new post.</p>
-<%- include('messages') %>
+  <hr>
   <form action='/post' method='post'>
-     <p>
-     <input type='text' name='entry[title]' placeholder='Title' />
-     </p>
-     <p>
-     <input type='submit' value='Post' />
-     </p>
+      <div class="form-group">
+        <label for="entry-text">Title:</label>
+        <input class="form-control input-lg" id="entry-title" type="text" name="entry[title]" />
+      </div>
+      <div class="form-group">
+        <label for="entry-text">Thoughts:</label>
+        <textarea class="form-control" rows="5" id="entry-text" name="entry[body]"></textarea>
+      </div>
+      <hr>
+      <%- include('messages') %>
+      <label>Stay incognito <input type="checkbox" name="entry[incognito]"></label> <br>
+      <input type='submit' value='Post' />
   </form>
   <%- include('foot') -%>
-

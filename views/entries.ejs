@@ -2,13 +2,17 @@
 <%- include('menu') -%>
 <div class="main-container">
 <% entries.forEach((entry) => { %>
-  <div class='entry-container'>
-    <div class='entry'>
-      <h3 class='entry-title'><%= entry.title %></h3>
-      <p class='entry-body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facere perferendis modi veniam rerum illum consequuntur corporis adipisci, accusantium possimus itaque delectus molestiae dicta magni fugit debitis laborum aperiam dolorem?</p>
-      <p class='entry-author'>Posted by <%= entry.username %></p>
-    </div>
+<div class="card mb-5 ml-5 mr-5">
+  <div class="card-body">
+    <h5 class="card-title"><%= entry.title %></h5>
+    <p class="card-text"><%= entry.body %></p>
+    <p class="card-text">
+      <small class="text-muted float-left post-date"><%= entry.date %></small>
+      <small class="text-muted float-right">Post by <%= entry.username %></small>
+    </p>
   </div>
+</div>
 <% }) %>
 </div>
+<script src="javascripts/bundle.js"></script>
 <%- include('foot') %>

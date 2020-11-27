@@ -6,25 +6,12 @@ body {
   padding: 5px 10px 5px 10px;
 }
 
-.entry-container {
-    background-color: #fff;
-    margin: 50px 150px 0 150px;
-    border: 1px black solid;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.entry {
-    margin: 10px;
-}
 .entry-author {
     float: right;
     clear: none;
-    margin: 0px 0 5px 0px;
-    font-style: italic;
-    color: gray;
 }
 
-.login-form {
+.login-form, .post-form {
     width: 400px;
     height: 400px;
     left: 50%;
@@ -38,4 +25,8 @@ body {
     overflow: auto;
     padding: 1em 2em;
     display: table;
+}
+
+.post-form {
+    width: 800px;
 }

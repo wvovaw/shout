@@ -19,21 +19,24 @@ router.get('/', (req, res, next) => {
   });
 });
 
-router.post('')
-
 /* POST posts page. */
 // Submit form
 router.post('/post',
   validate.required('entry[title]'),
-  validate.lengthAbove('entry[title]', 4),
+  validate.required('entry[body]'),
   (req, res, next) => {
     const data = req.body.entry;
     const user = res.locals.user;
-    const username = user ? user.name : 'Anonimalus';
+    const date = new Date();
+    let username = 'Anonimalus';
+    if (!data.incognito)
+      username = user ? user.name : 'Anonimalus';
+
     const entry = new Entry({
       username: username,
       title: data.title,
-      body: data.body
+      body: data.body,
+      date: date
     });
     entry.save((err) => {
       if (err) return next(err);
