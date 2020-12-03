@@ -30,3 +30,10 @@ body {
 .post-form {
     width: 800px;
 }
+
+.post-body {
+  white-space: pre-wrap;
+  padding: 10px;
+  border: 1px rgb(229 229 229) solid;
+  border-radius: 3px;
+}

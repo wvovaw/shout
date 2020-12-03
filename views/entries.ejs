@@ -4,11 +4,11 @@
 <% entries.forEach((entry) => { %>
 <div class="card mb-5 ml-5 mr-5">
   <div class="card-body shadow">
-    <h5 class="card-title"><%= entry.title %></h5>
-    <p class="card-text"><%= entry.body %></p>
+    <h5 class="card-title post-title"><%= entry.title %></h5>
+    <p class="card-text post-body"><%= entry.body %></p>
     <p class="card-text">
       <small class="text-muted float-left post-date"><%= entry.date %></small>
-      <small class="text-muted float-right">Post by <%= entry.username %></small>
+      <small class="text-muted float-right post-username">Post by <%= entry.username %></small>
     </p>
   </div>
 </div>
